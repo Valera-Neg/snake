@@ -16,7 +16,7 @@ const handeleUserInput = function(conn) {
     } else if (isMovingKey(k)) {
       conn.write(MOVES[k]);
     } else if (isMessageKey(k)) {
-      conn.write(CLIENT_MESSAGES[K]);
+      conn.write(CLIENT_MESSAGES[k]);
     }
   });
 };

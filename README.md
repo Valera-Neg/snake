@@ -14,14 +14,14 @@ Gamebord...
 ## Getting Started
 
 1. ### Starting Server:
-* From the 'server' directory: 
-`npm install`<br />   then `npm run play`
+* From the folder with name server in the terminal enter: 
+`npm install`<br />   then enter `npm run play`
 the gamebord will open.
 <br />
 
 
 2. ### Open Client(player) part:
- From the 'public' directory
+    From the 'public' folder in your terminal enter:
 `node play.js <name>`. simple put three first letter of your name.
 
 * Exit ftom server(Gamebort):   Ctrl ^ C
@@ -31,6 +31,12 @@ the gamebord will open.
 
 
 !["IP/PORT"](/img/ip/port.png)
+
+3. ### Sending Funy Messeges:
+   During the game you can sent messages for evry players
+   just press skey `R` or `F` or `V`
+   and check what you'll get. 
+
 
 
 

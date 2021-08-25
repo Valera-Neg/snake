@@ -1,5 +1,5 @@
 const net = require('net');
-const { IP, PORT, CLIENT_MESSAGE } = require('./constants');
+const { IP, PORT, CLIENT_MESSAGES } = require('./constants');
 
 const connect = function() {
   const conn = net.createConnection({
@@ -11,21 +11,8 @@ const connect = function() {
 
   conn.on('connect', () => {
     
-    console.log(CLIENT_MESSAGE.conectMessage),
-    conn.write(CLIENT_MESSAGE.playerName);
-    
-    setTimeout(() =>  {
-      conn.write(CLIENT_MESSAGE.massaga30)
-    }, 10000 );
-
-    setTimeout(() =>  {
-      conn.write(CLIENT_MESSAGE.massage60)
-    }, 15000 );
-
-    setTimeout(() =>  {
-      conn.write(CLIENT_MESSAGE.massage100)
-    }, 20000 );
-    
+    console.log(CLIENT_MESSAGES.conectMessage),
+    conn.write(CLIENT_MESSAGES.playerName);
   });
   
   conn.on('data', (data) => {
@@ -33,10 +20,10 @@ const connect = function() {
   });
 
   conn.on('error', err => {
-    console.log('Server is not connected')
-  })
+    console.log('Server is not connected');
+  });
 
   return conn;
-}
+};
 
 module.exports.connect = connect;
