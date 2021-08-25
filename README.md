@@ -34,7 +34,7 @@ the gamebord will open.
 
 3. ### Sending Funy Messeges:
    During the game you can sent messages for evry players
-   just press skey `R` or `F` or `V`
+   just press skey `G` or `K` or `L`
    and check what you'll get. 
 
 
