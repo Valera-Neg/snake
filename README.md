@@ -45,7 +45,7 @@ the gamebord will open.
 
 
 
-
+[Poor commits explanation link] (https://github.com/Valera-Neg/snake-client/edit/master/README.md)
 
 
 
