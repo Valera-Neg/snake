@@ -74,7 +74,7 @@ class RemoteInterface {
 
     client.on('data', this.handleClientData.bind(this, client))
     client.on('end', this.handleClientEnded.bind(this, client))
-  }
+  };
 
   handleClientData(client, data) {
     if (this.clientDataHandler) {
@@ -84,6 +84,12 @@ class RemoteInterface {
 
   handleClientEnded(client) {
     if (client.idleTimer) clearTimeout(client.idleTimer)
+    // cleanning client's array from ended players
+      for (let i = 0; i < this.clients.length; i++) {
+        if (this.clients[i] === client) { 
+          this.clients.splice(i, 1);
+        }
+      }
     if (this.clientEndHandler) this.clientEndHandler(client)
   }
 
